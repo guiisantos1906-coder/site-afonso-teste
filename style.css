@@ -1,0 +1,847 @@
+
+/* ==========================================
+   AFONSO FUMÊ
+   CSS principal do site
+========================================== */
+
+
+/* ==========================================
+   1. CORES E VARIÁVEIS
+========================================== */
+
+:root {
+    --bg: #0b100d;
+    --panel: #17211a;
+    --green: #4cc966;
+    --white: #f4f8f4;
+    --muted: #b6c2b9;
+}
+
+
+/* ==========================================
+   2. CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--white);
+    font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #a5f9b5;
+    outline-offset: 3px;
+}
+
+
+/* ==========================================
+   3. CABEÇALHO E MENU
+========================================== */
+
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    background: #0b100df2;
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #294031;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px max(5%, calc((100% - 1200px) / 2));
+    gap: 18px;
+}
+
+.marca,
+footer strong {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+}
+
+.marca span,
+footer span {
+    color: var(--green);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.cart-btn,
+.menu-toggle {
+    background: #1c3524;
+    border: 1px solid #477d50;
+    color: white;
+
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.cart-btn {
+    border-radius: 7px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* ==========================================
+   4. PÁGINA INICIAL
+========================================== */
+
+.hero {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 570px;
+
+    padding: 75px 5%;
+
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 52px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 4.2vw, 4.2rem);
+    line-height: 1.13;
+    letter-spacing: -0.035em;
+    margin: 18px 0;
+}
+
+.hero em {
+    font-style: normal;
+    color: var(--green);
+}
+
+.hero p {
+    color: var(--muted);
+}
+
+.tag {
+    color: var(--green);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.fachada {
+    width: 100%;
+    max-height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+    border: 1px solid #375b40;
+
+    box-shadow: 0 16px 44px #0006;
+}
+
+
+/* ==========================================
+   5. BOTÕES
+========================================== */
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.botao {
+    display: inline-block;
+
+    background: var(--green);
+    color: #0a180d;
+
+    font-weight: 800;
+
+    border: 0;
+    border-radius: 7px;
+
+    padding: 12px 21px;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+    background: #83eb96;
+    transform: translateY(-1px);
+}
+
+.secundario {
+    background: transparent;
+    color: white;
+    border: 1px solid #6e9876;
+}
+
+
+/* ==========================================
+   6. SEÇÕES GERAIS
+========================================== */
+
+.secao {
+    padding: 85px max(5%, calc((100% - 1200px) / 2));
+}
+
+.secao h2 {
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+    letter-spacing: -0.025em;
+    margin: 8px 0 20px;
+}
+
+
+/* ==========================================
+   7. SOBRE NÓS
+========================================== */
+
+.sobre {
+    background: #121b15;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   8. SERVIÇOS
+========================================== */
+
+.cards,
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.card,
+.produto {
+    background: var(--panel);
+
+    border: 1px solid #2d4634;
+    border-radius: 12px;
+
+    padding: 22px;
+
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover,
+.produto:hover {
+    border-color: #53825e;
+    transform: translateY(-2px);
+}
+
+.card h3,
+.produto h3 {
+    margin: 8px 0;
+}
+
+.card p,
+.produto p {
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+
+.simbolo {
+    font-size: 2.4rem;
+}
+
+
+/* ==========================================
+   9. CATÁLOGO DE PRODUTOS
+========================================== */
+
+.fundo {
+    background: #101913;
+}
+
+.sub {
+    color: var(--muted);
+}
+
+
+/* Filtros */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 22px 0;
+}
+
+.filtro {
+    background: #1d2b21;
+
+    border: 1px solid #36513b;
+    border-radius: 7px;
+
+    color: white;
+
+    padding: 8px 15px;
+}
+
+.filtro.ativo {
+    background: var(--green);
+    color: #071209;
+}
+
+
+/* Cartões dos produtos */
+
+.produto {
+    display: flex;
+    flex-direction: column;
+}
+
+.produto .emoji {
+    height: 110px;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 4rem;
+
+    background: #26372b;
+    border-radius: 12px;
+}
+
+.produto .preco {
+    margin-top: auto;
+
+    color: #8de99d;
+    font-weight: 800;
+}
+
+.produto button {
+    margin-top: 12px;
+
+    background: #335c3d;
+    color: white;
+
+    border: 1px solid #518a5c;
+    border-radius: 7px;
+
+    padding: 10px;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.produto button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   10. GALERIA
+========================================== */
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 330px;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.galeria-placeholder {
+    background: var(--panel);
+
+    border: 1px dashed #54745b;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    padding: 24px;
+}
+
+.galeria-placeholder span {
+    font-size: 3rem;
+}
+
+
+/* ==========================================
+   11. HORÁRIO DE FUNCIONAMENTO
+========================================== */
+
+.secao-horarios {
+    background: #0d1510;
+
+    padding-top: 62px;
+    padding-bottom: 62px;
+}
+
+.horarios-loja {
+    margin: 24px 0;
+    padding: 18px 20px;
+
+    background: #17241b;
+
+    border: 1px solid #35503b;
+    border-radius: 10px;
+}
+
+.horarios-loja h4 {
+    margin: 0 0 12px;
+
+    font-size: 1.05rem;
+    color: #f4f7f4;
+}
+
+.horarios-loja dl {
+    margin: 0;
+}
+
+.horarios-loja dl > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #314437;
+}
+
+.horarios-loja dt {
+    color: #d6e2d8;
+}
+
+.horarios-loja dd {
+    margin: 0;
+
+    font-weight: 600;
+    color: #fff;
+
+    text-align: right;
+}
+
+.horarios-loja .aviso-horario {
+    font-size: 0.85rem;
+    margin: 12px 0 0;
+    color: #a9b7ad;
+}
+
+
+/* Ajustes da seção independente */
+
+.secao-horarios .horarios-loja {
+    max-width: 740px;
+
+    margin: 22px 0 0;
+    padding: 22px 28px;
+}
+
+.secao-horarios .horarios-loja dl > div:last-child {
+    border-bottom: 0;
+}
+
+
+/* ==========================================
+   12. LOCALIZAÇÃO DA LOJA
+========================================== */
+
+.localizacao {
+    background: #101913;
+}
+
+.localizacao-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+
+    gap: 32px;
+    align-items: center;
+}
+
+.localizacao-info h3 {
+    font-size: 1.45rem;
+    margin: 0 0 12px;
+}
+
+.localizacao-info p {
+    color: var(--muted);
+    margin: 0 0 18px;
+}
+
+.localizacao-info address {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+
+/* Google Maps */
+
+.mapa-container {
+    background: #19251c;
+
+    border: 1px solid #36513b;
+    border-radius: 12px;
+
+    overflow: hidden;
+    min-height: 350px;
+}
+
+.mapa-container iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+
+/* ==========================================
+   13. CONTATO
+========================================== */
+
+.contato {
+    text-align: center;
+    background: #17251b;
+}
+
+.contato p {
+    color: var(--muted);
+}
+
+.contato .detalhe {
+    font-size: 0.9rem;
+    margin-top: 18px;
+}
+
+
+/* ==========================================
+   14. RODAPÉ
+========================================== */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+
+    color: var(--muted);
+}
+
+footer strong {
+    color: white;
+}
+
+
+/* ==========================================
+   15. FUNDO DO CARRINHO
+========================================== */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: #000b;
+    z-index: 20;
+}
+
+.overlay[hidden] {
+    display: none;
+}
+
+
+/* ==========================================
+   16. PAINEL DO CARRINHO
+========================================== */
+
+.carrinho {
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    height: 100dvh;
+    width: min(430px, 100%);
+
+    background: #132017;
+
+    border-left: 1px solid #45634b;
+
+    z-index: 21;
+
+    transform: translateX(110%);
+    transition: transform 0.25s;
+
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.carrinho.aberto {
+    transform: translateX(0);
+}
+
+.cabecalho-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho-carrinho button {
+    background: none;
+    color: white;
+
+    border: 0;
+    font-size: 1.5rem;
+}
+
+.aviso {
+    font-size: 0.84rem;
+    color: #b9c9bd;
+}
+
+
+/* Produtos no carrinho */
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #395340;
+}
+
+.item-carrinho button {
+    background: #365b40;
+    color: white;
+
+    border: 0;
+    border-radius: 6px;
+
+    padding: 3px 9px;
+}
+
+
+/* Total e finalização */
+
+.total {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 24px;
+}
+
+.finalizar {
+    width: 100%;
+}
+
+
+/* ==========================================
+   17. RESPONSIVIDADE - TABLETS
+========================================== */
+
+@media (max-width: 950px) {
+
+    .cards,
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        gap: 24px;
+    }
+
+}
+
+
+/* ==========================================
+   18. RESPONSIVIDADE - CELULARES
+========================================== */
+
+@media (max-width: 700px) {
+
+    /* Menu */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        background: #101b13;
+        padding: 20px;
+
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+
+    /* Página inicial */
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 55px;
+        min-height: auto;
+    }
+
+
+    /* Seções */
+
+    .secao {
+        padding: 60px 5%;
+    }
+
+
+    /* Galeria */
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: auto;
+    }
+
+
+    /* Horários */
+
+    .secao-horarios {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .secao-horarios .horarios-loja {
+        padding: 16px;
+    }
+
+
+    /* Localização */
+
+    .localizacao-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+}
+
+
+/* ==========================================
+   19. RESPONSIVIDADE - TELAS PEQUENAS
+========================================== */
+
+@media (max-width: 480px) {
+
+    .cards,
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+}
+
+
+/* ==========================================
+   20. AJUSTES PARA TELAS ATÉ 420px
+========================================== */
+
+@media (max-width: 420px) {
+
+    .horarios-loja {
+        padding: 14px;
+    }
+
+    .horarios-loja dl > div {
+        gap: 8px;
+    }
+
+}
+
+
+/* ==========================================
+   21. ACESSIBILIDADE
+========================================== */
+
+/* Reduz animações quando solicitado
+   nas configurações do dispositivo */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .card,
+    .produto,
+    .botao,
+    .produto button,
+    .cart-btn {
+        transition: none;
+    }
+
+    .card:hover,
+    .produto:hover,
+    .botao:hover,
+    .produto button:hover {
+        transform: none;
+    }
+
+}

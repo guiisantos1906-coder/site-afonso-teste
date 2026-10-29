@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="AFONSO FUMÊ: películas automotivas, residenciais e comerciais e acessórios para veículos."
+    >
+
+    <title>AFONSO FUMÊ | Películas e acessórios</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== CABEÇALHO ========== -->
+
+    <header class="topo">
+
+        <a class="marca" href="#inicio">
+            AFONSO <span>FUMÊ</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#localizacao">Localização</a>
+            <a href="#contato">Contato</a>
+
+            <button id="abrir-carrinho" class="cart-btn">
+                🛒 Carrinho <span id="contagem">0</span>
+            </button>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========== INÍCIO ========== -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-text">
+
+                <span class="tag">AFONSO FUMÊ</span>
+
+                <h1>
+                    Proteção, conforto e <em>estilo</em>
+                    para seu veículo e seus espaços.
+                </h1>
+
+                <p>
+                    Películas automotivas, residenciais e comerciais,
+                    além de acessórios para veículos.
+                </p>
+
+                <div class="acoes">
+
+                    <a
+                        class="botao"
+                        href="https://wa.me/5583988407190?text=Ol%C3%A1%21%20Quero%20solicitar%20um%20or%C3%A7amento."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Solicitar orçamento
+                    </a>
+
+                    <a class="botao secundario" href="#servicos">
+                        Ver serviços
+                    </a>
+
+                </div>
+
+            </div>
+
+            <img
+                class="fachada"
+                src="assets/fachada.png"
+                alt="Fachada da loja AFONSO FUMÊ"
+            >
+
+        </section>
+
+
+        <!-- ========== SOBRE NÓS ========== -->
+
+        <section id="sobre" class="secao sobre">
+
+            <span class="tag">QUEM SOMOS</span>
+
+            <h2>Bem-vindo à AFONSO FUMÊ</h2>
+
+            <p>
+                Oferecemos soluções em películas para veículos,
+                residências e estabelecimentos comerciais,
+                além de acessórios automotivos.
+
+                Entre em contato para conhecer as opções
+                disponíveis e solicitar seu orçamento.
+            </p>
+
+        </section>
+
+
+        <!-- ========== SERVIÇOS ========== -->
+
+        <section id="servicos" class="secao">
+
+            <span class="tag">O QUE FAZEMOS</span>
+
+            <h2>Nossos serviços</h2>
+
+            <div class="cards">
+
+                <!-- Películas automotivas -->
+
+                <article class="card">
+
+                    <div class="simbolo">🚘</div>
+
+                    <h3>Películas automotivas</h3>
+
+                    <p>
+                        Mais conforto, privacidade e proteção
+                        solar para seu veículo.
+                    </p>
+
+                </article>
+
+
+                <!-- Películas residenciais -->
+
+                <article class="card">
+
+                    <div class="simbolo">🏡</div>
+
+                    <h3>Películas residenciais</h3>
+
+                    <p>
+                        Soluções para janelas e vidros
+                        de casas e apartamentos.
+                    </p>
+
+                </article>
+
+
+                <!-- Películas comerciais -->
+
+                <article class="card">
+
+                    <div class="simbolo">🏢</div>
+
+                    <h3>Películas comerciais</h3>
+
+                    <p>
+                        Películas para vitrines, escritórios
+                        e ambientes comerciais.
+                    </p>
+
+                </article>
+
+
+                <!-- Acessórios automotivos -->
+
+                <article class="card">
+
+                    <div class="simbolo">🧰</div>
+
+                    <h3>Acessórios automotivos</h3>
+
+                    <p>
+                        Consulte nossa equipe sobre os
+                        acessórios disponíveis.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== CATÁLOGO ========== -->
+
+        <section id="catalogo" class="secao fundo">
+
+            <span class="tag">EM PREPARAÇÃO</span>
+
+            <h2>Catálogo de acessórios</h2>
+
+            <p class="sub">
+                Itens ilustrativos para testar o carrinho.
+
+                <strong>
+                    Não são ofertas nem estoque confirmado.
+                </strong>
+
+                Preços ainda não cadastrados.
+            </p>
+
+            <!-- Filtros do catálogo -->
+
+            <div class="filtros">
+
+                <button class="filtro ativo" data-filtro="Todos">
+                    Todos
+                </button>
+
+                <button class="filtro" data-filtro="Interior">
+                    Interior
+                </button>
+
+                <button class="filtro" data-filtro="Exterior">
+                    Exterior
+                </button>
+
+                <button class="filtro" data-filtro="Utilidades">
+                    Utilidades
+                </button>
+
+            </div>
+
+            <!-- Produtos carregados pelo JavaScript -->
+
+            <div id="produtos" class="produtos"></div>
+
+        </section>
+
+
+        <!-- ========== GALERIA ========== -->
+
+        <section id="galeria" class="secao">
+
+            <span class="tag">NOSSA LOJA</span>
+
+            <h2>Conheça a AFONSO FUMÊ</h2>
+
+            <div class="galeria">
+
+                <img
+                    src="assets/fachada.png"
+                    alt="Fachada da AFONSO FUMÊ"
+                >
+
+                <div class="galeria-placeholder">
+
+                    <span>📷</span>
+
+                    <h3>Galeria de serviços</h3>
+
+                    <p>
+                        Em breve, fotos dos trabalhos
+                        realizados pela equipe.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== HORÁRIO DE FUNCIONAMENTO ========== -->
+
+        <section id="horarios" class="secao secao-horarios">
+
+            <span class="tag">QUANDO VISITAR</span>
+
+            <h2>Horário de funcionamento</h2>
+
+            <div class="horarios-loja">
+
+                <dl>
+
+                    <div>
+                        <dt>Segunda a sexta</dt>
+                        <dd>8h às 18h</dd>
+                    </div>
+
+                    <div>
+                        <dt>Sábado</dt>
+                        <dd>8h às 13h</dd>
+                    </div>
+
+                    <div>
+                        <dt>Domingo</dt>
+                        <dd>Fechado</dd>
+                    </div>
+
+                </dl>
+
+                <p class="aviso-horario">
+                    Em feriados, os horários podem variar.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== LOCALIZAÇÃO ========== -->
+
+        <section id="localizacao" class="secao localizacao">
+
+            <span class="tag">ONDE ESTAMOS</span>
+
+            <h2>Visite nossa loja</h2>
+
+            <div class="localizacao-grid">
+
+                <!-- Informações da loja -->
+
+                <div class="localizacao-info">
+
+                    <h3>AFONSO FUMÊ</h3>
+
+                    <p>
+                        Estamos na Torre, em João Pessoa.
+
+                        Venha conhecer nossos serviços ou
+                        fale com a equipe antes da visita.
+                    </p>
+
+                    <address>
+                        R. Joaquim Torres, 573 - Torre,
+                        João Pessoa - PB, 58040-210
+                    </address>
+
+                    <div class="acoes">
+
+                        <a
+                            class="botao"
+                            href="https://www.google.com/maps/dir/?api=1&amp;destination=R.%20Joaquim%20Torres%2C%20573%20-%20Torre%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058040-210"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Como chegar
+                        </a>
+
+                        <a
+                            class="botao secundario"
+                            href="https://wa.me/5583988407190"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Falar no WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Google Maps -->
+
+                <div class="mapa-container">
+
+                    <iframe
+                        title="Mapa da localização da AFONSO FUMÊ"
+                        src="https://www.google.com/maps?q=R.%20Joaquim%20Torres%2C%20573%20-%20Torre%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058040-210&amp;output=embed"
+                        width="100%"
+                        height="350"
+                        style="border:0"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========== CONTATO ========== -->
+
+        <section id="contato" class="secao contato">
+
+            <span class="tag">FALE CONOSCO</span>
+
+            <h2>Solicite seu orçamento</h2>
+
+            <p>
+                Fale com a equipe para consultar serviços,
+                acessórios e disponibilidade.
+            </p>
+
+            <a
+                class="botao"
+                href="https://wa.me/5583988407190?text=Ol%C3%A1%2C%20AFONSO%20FUM%C3%8A%21%20Gostaria%20de%20um%20or%C3%A7amento."
+                target="_blank"
+                rel="noopener"
+            >
+                Conversar no WhatsApp
+            </a>
+
+            <p class="detalhe">
+                WhatsApp: (83) 98840-7190
+            </p>
+
+            <p class="detalhe">
+                Endereço: R. Joaquim Torres, 573 - Torre,
+                João Pessoa - PB, 58040-210.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========== RODAPÉ ========== -->
+
+    <footer>
+
+        <strong>
+            AFONSO <span>FUMÊ</span>
+        </strong>
+
+        <p>Películas e acessórios automotivos.</p>
+
+        <small>
+            © <span id="ano"></span> AFONSO FUMÊ.
+            Todos os direitos reservados.
+        </small>
+
+    </footer>
+
+
+    <!-- ========== CARRINHO DE COMPRAS ========== -->
+
+    <div id="overlay" class="overlay" hidden></div>
+
+    <aside
+        id="painel-carrinho"
+        class="carrinho"
+        aria-label="Carrinho de compras"
+        aria-hidden="true"
+    >
+
+        <div class="cabecalho-carrinho">
+
+            <h2>Seu carrinho</h2>
+
+            <button
+                id="fechar-carrinho"
+                aria-label="Fechar carrinho"
+            >
+                ✕
+            </button>
+
+        </div>
+
+        <p class="aviso">
+            Catálogo demonstrativo: produtos sujeitos
+            a confirmação. Nenhuma cobrança é realizada
+            neste site.
+        </p>
+
+        <!-- Itens adicionados ao carrinho -->
+
+        <div id="itens-carrinho"></div>
+
+        <!-- Total do carrinho -->
+
+        <p class="total">
+            Total: <strong id="total">A consultar</strong>
+        </p>
+
+        <!-- Finalização pelo WhatsApp -->
+
+        <button id="finalizar" class="botao finalizar">
+            Consultar itens pelo WhatsApp
+        </button>
+
+        <p class="aviso">
+            Pagamento online por PIX e cartão estará
+            disponível após a integração segura de
+            uma plataforma de pagamentos.
+        </p>
+
+    </aside>
+
+
+    <!-- ========== JAVASCRIPT ========== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
